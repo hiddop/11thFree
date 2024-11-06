@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYARWI MAJE KARO</title>
+    <link rel="icon" href="https://i.ibb.co/dG3HTDf/672b311b.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #FF2C65;
+            padding-top: 70px;
+        }
+
+        .header {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+         .circle-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .card {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            margin: 15px;
+            padding: 30px;
+            background-color: #FFFFAE;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            border-left: 6px solid #7133FF;
+        }
+
+        .second-card {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            border-left: 6px solid #000871;
+        }
+
+        .card svg {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            fill: #7133FF;
+        }
+
+        .second-card svg {
+            fill: #000871;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(113, 51, 255, 0.5), 0 6px 15px rgba(113, 51, 255, 0.3);
+        }
+
+       .second-card:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5), 0 6px 15px rgba(255, 87, 51, 0.3);
+        }
+
+        .subcards {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .subcard {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            border-left: 6px solid #02B651;
+       }
+
+       .subcard svg {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            fill: #02B651;
+            opacity: 0;
+            transition: opacity 0.3s;
+       }
+
+       .subcard:hover svg {
+            opacity: 1;
+       }
+
+       .subcard:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5), 0 6px 15px rgba(0, 255, 255, 0.3);
+       }
+
+      .button-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1000;
+      }
+
+      .btn {
+          display: flex;
+          align-items: center;
+          background-color: #05a044;
+          color: #fff;
+          border: none;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          text-decoration: none;
+      }
+
+      .btn svg {
+          margin-right: 10px;
+      }
+
+      .btn:hover {
+          background-color: #05a044;
+          transform: translateY(-3px);
+      }
+.button { background-color: #DD9500; /* Set background to red */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; /* Add smooth transition on hover */ } .button:hover { /* Change background on hover */ background-color: darkred; } .button1 { background-color: green; /* Set background to red */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; /* Add smooth transition on hover */ } .myParagraph { color: pink; /* Set text color to blue */ font-size: 24px; /* Set font size to 24 pixels */ font-family: Arial, sans-serif; /* Choose a font */ }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+         𝟭𝟭𝘁𝗵 𝗪𝗮𝗹𝗼 𝗠𝗼𝗷 𝗸𝗮𝗿𝗼 😁🥰||𝐒𝐂𝐑𝐎𝐋𝐋 𝐃𝐎𝐖𝐍 👇👇
+    </div>
+
+     <div class="circle-image">
+        <img src="https://i.ibb.co/dG3HTDf/672b311b.jpg" alt="Profile Image">
+    </div>
+
+    <h2 id="subject-title" class="title">𝐌𝐈𝐓 𝟏𝟏𝐭𝐡 𝐇𝐈𝐃𝐃𝐄𝐍𝐒</h2>
+<a  href="https://linksshortner.xyz/watch/174753/HOW_TO_OPEN_INSTANTEARN_%EF%BC%9F%EF%BC%9F_%EF%BD%9C_Only_click_on_%EF%BC%82CONTINUE%EF%BC%82_%EF%BD%9C_plea.mp4?hash=AgADUB" class="button">𝐇𝐨𝐰 𝐭𝐨 𝐎𝐩𝐞𝐧 𝐋𝐢𝐧𝐤 ??</a> </div> <div> <a href="https://yashyasag.github.io/hiddens_officials" class="button1">𝐌𝐀𝐈𝐍 𝐖𝐄𝐁𝐒𝐈𝐓𝐄 😍</a><b> <p style="color: #260F41; font-size:16px;">𝗡𝗢𝗧𝗘 :- 𝐍𝐨 𝐚𝐧𝐲𝐨𝐧𝐞 𝐡𝐚𝐫𝐦𝐞𝐝 𝐢𝐟 𝐬𝐭𝐢𝐥𝐥 𝐚𝐧𝐲 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 𝐭𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐦𝐞 𝐨𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐈 𝐑𝐞𝐦𝐨𝐯𝐞 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐨𝐫 𝐃𝐨𝐰𝐧 𝐭𝐡𝐢𝐬 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 . 𝐒𝐨, 𝙞𝙛 𝙮𝙤𝙪 𝙝𝙖𝙫𝙚 𝙖𝙣𝙮 𝙥𝙧𝙤𝙗𝙡𝙚𝙢 𝙟𝙪𝙨𝙩 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙢𝙚 🙏🙏</p></b> <div style="display: flex; justify-content: center; height: 5vh;"> <button style="background-color:#FF0042; color:white; padding:5px 30px; font-size:16px; border-radius: 20px;"><a href="https://t.me/team_hiddens_bot" style="color:white; text-decoration:none;">𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗨𝗦 🙏🙏</a></button> </div> </div> <p style="color:#00000; font-size:16px;">𝗛𝗲𝗿𝗲 𝗳𝗼𝗿 𝟭𝟮𝘁𝗵𝗶𝗲𝘀 😁👇</p> <div style="display: flex; justify-content: center; height: 5vh;"> <button style="background-color:#3D6064; color:white; padding:5px 30px; font-size:16px; border-radius: 20px;"><a href="https://hiddop.github.io/12thies/" style="color:white; text-decoration:none;">𝗕𝗔𝗥𝗪𝗜 𝗪𝗮𝗹𝗲 😖✨</a></button> </div> </div> <p style="color:#0F0E38; font-size:16px;">𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 - 𝐈𝐧 𝐭𝐡𝐢𝐬 𝐨𝐧𝐥𝐲 𝐚𝐝𝐝𝐞𝐝 𝐭𝐡𝐚𝐭 𝐰𝐡𝐢𝐜𝐡 𝐢𝐬 𝐜𝐨𝐦𝐩𝐥𝐞𝐭𝐞 ☠️.𝐈𝐟 𝐬𝐭𝐢𝐥𝐥 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐜𝐨𝐧𝐭𝐚𝐜𝐭 𝐮𝐬 𝐚𝐭 𝐚𝐛𝐨𝐯𝐞 𝐛𝐮𝐭𝐭𝐨𝐧</p>
+    <div id="cards-container">
+         <!-- Cards div through JS -->
+    </div>
+
+    <div class="button-container">
+         <a href="https://t.me/HIDDEN_OFFICIALS_2" class="btn" target="_blank" rel="noopener noreferrer">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+          </svg>
+          <span>JOiN BACKUP</span>
+       </a>
+    </div>
+
+<script>
+    const firstcardsData = [
+{
+            name: '𝗣𝗛𝗬𝗦𝗜𝗖𝗦',
+            secondcards: [
+                {
+                    name: '𝐕𝐄𝐂𝐓𝐎𝐑𝐒',
+                    subcards: [
+                        { name: '𝐕𝐞𝐜𝐭𝐨𝐫 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/LwU4' },
+                        { name: '𝐕𝐞𝐜𝐭𝐨𝐫 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/88cY' },
+                        { name: '𝐕𝐞𝐜𝐭𝐨𝐫 | 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/XeZvKix' }
+                    ]
+                },
+                {
+                    name: '𝐁𝐀𝐒𝐈𝐂 𝐌𝐀𝐓𝐇𝐒',
+                    subcards: [
+                        { name: '𝐁𝐚𝐬𝐢𝐜 𝐌𝐚𝐭𝐡𝐬 𝐋𝐄𝐂𝐙', linkshortner: 'https://instantearn.in/0vrADY2N' },
+                        { name: '𝐁𝐚𝐬𝐢𝐜 𝐌𝐚𝐭𝐡𝐬 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/8zrtVq' }
+                    ]
+                },
+                {
+                    name: '𝐊𝐈𝐍𝐄𝐌𝐀𝐓𝐈𝐂𝐒',
+                    subcards: [
+                        { name: '𝐊𝐢𝐧𝐞𝐦𝐚𝐭𝐢𝐜𝐬 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/9wMyV' },
+                        { name: '𝐊𝐢𝐧𝐞𝐦𝐚𝐭𝐢𝐜𝐬 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/Jfu1C' },
+                        { name: '𝐊𝐢𝐧𝐞𝐦𝐚𝐭𝐢𝐜𝐬 | 𝐏𝐀𝐑𝐓 𝟑', linkshortner: 'https://instantearn.in/FGVkW' },
+                        { name: '𝐊𝐢𝐧𝐞𝐦𝐚𝐭𝐢𝐜𝐬 | 𝐏𝐀𝐑𝐓 𝟒', linkshortner: 'https://instantearn.in/iwWEn' },
+                        { name: '𝐊𝐢𝐧𝐞𝐦𝐚𝐭𝐢𝐜𝐬 | 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/jBAXC4SV' }
+                    ]
+                },
+                {
+                    name: '𝐋𝐀𝐖𝐒 𝐎𝐅 𝐌𝐎𝐓𝐈𝐎𝐍',
+                    subcards: [
+                        { name: '𝐍𝐋𝐌 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/WZeuHpU' },
+                        { name: '𝐍𝐋𝐌 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/ionnW' },
+                        { name: '𝐍𝐋𝐌 | 𝐏𝐀𝐑𝐓 𝟑', linkshortner: 'https://instantearn.in/KAGzB4' },
+                        { name: '𝐍𝐋𝐌 | 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/L8sqI' }
+                    ]
+                },
+                {
+                    name: '𝐂𝐈𝐑𝐂𝐔𝐋𝐀𝐑 𝐌𝐎𝐓𝐈𝐎𝐍',
+                    subcards: [
+                        { name: '𝐂𝐢𝐫𝐜𝐮𝐥𝐚𝐫 𝐌𝐨𝐭𝐢𝐨𝐧 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/p3mb' },
+                        { name: '𝐂𝐢𝐫𝐜𝐮𝐥𝐚𝐫 𝐌𝐨𝐭𝐢𝐨𝐧 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/m9v093' },
+                        { name: '𝐂𝐢𝐫𝐜𝐮𝐥𝐚𝐫 𝐌𝐨𝐭𝐢𝐨𝐧 | 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/8i1Jdy' }
+                    ]
+                },
+{
+                    name: '𝐖𝐏𝐄',
+                    subcards: [
+                        { name: '𝐖𝐩𝐞 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/vJta' },
+                        { name: '𝐖𝐩𝐞 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/lcrWlUM' },
+                        { name: '𝐖𝐩𝐞 | 𝐍𝐎𝐓𝐄𝐒', linkshortner: 'https://instantearn.in/7DUfy' }
+                    ]
+                },
+{
+                    name: '𝐂𝐎𝐌 & 𝐋𝐌𝐂',
+                    subcards: [
+                        { name: '𝐂𝐨𝐦 | 𝐏𝐀𝐑𝐓 𝟏', linkshortner: 'https://instantearn.in/ed9yj' },
+                        { name: '𝐂𝐨𝐦 | 𝐏𝐀𝐑𝐓 𝟐', linkshortner: 'https://instantearn.in/LuHV' },
+                        { name: '𝐂𝐨𝐦 | 𝐏𝐀𝐑𝐓 𝟑', linkshortner: 'https://instantearn.in/EYhGZ' },
+                        { name: '𝐂𝐨𝐦 | 𝐍𝐎𝐓𝐄𝐙', linkshortner: 'https://instantearn.in/KahY4' }
+                    ]
+                }
+            ]
+        }
+    ];
+
+
+function createCard(cardData, isSecondCard = false) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        ${cardData.name}
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="${isSecondCard ? '#FF0000' : '#FF0000'}" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+        </svg>
+    `;
+
+    if (isSecondCard) {
+        card.classList.add('second-card');
+        card.addEventListener('click', function() {
+            const subcards = this.nextElementSibling;
+            if (subcards.style.display === 'none' || subcards.style.display === '') {
+                subcards.style.display = 'block';
+            } else {
+                subcards.style.display = 'none';
+            }
+        });
+    } else {
+        card.addEventListener('click', function() {
+            const secondCards = this.nextElementSibling;
+            if (secondCards.style.display === 'none' || secondCards.style.display === '') {
+                secondCards.style.display = 'block';
+            } else {
+                secondCards.style.display = 'none';
+            }
+        });
+    }
+
+    const subcardsContainer = document.createElement('div');
+    subcardsContainer.className = 'subcards';
+
+    cardData.subcards?.forEach(subcardData => {
+        const subcard = document.createElement('div');
+        subcard.className = 'subcard';
+        subcard.innerHTML = `
+            ${subcardData.name}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00FFFF" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        `;
+        subcard.setAttribute('data-link', subcardData.linkshortner);
+        subcard.addEventListener('click', function(event) {
+            event.stopPropagation();
+            const link = this.getAttribute('data-link');
+            window.location.href = link;
+        });
+        subcardsContainer.appendChild(subcard);
+    });
+
+    if (isSecondCard) {
+        return { card, subcardsContainer };
+    } else {
+        return { card, secondCardsContainer: subcardsContainer };
+    }
+}
+
+function loadCards() {
+    const container = document.getElementById('cards-container');
+    
+    firstcardsData.forEach(firstCardData => {
+        const { card, secondCardsContainer } = createCard(firstCardData);
+        container.appendChild(card);
+
+        const secondCardsWrapper = document.createElement('div');
+        secondCardsWrapper.className = 'second-cards-wrapper';
+        secondCardsWrapper.style.display = 'none';
+
+        firstCardData.secondcards.forEach(secondCardData => {
+            const { card: secondCard, subcardsContainer } = createCard(secondCardData, true);
+            secondCardsWrapper.appendChild(secondCard);
+            secondCardsWrapper.appendChild(subcardsContainer);
+        });
+
+        container.appendChild(secondCardsWrapper);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadCards);
+
+    </script>
+
+</body>
+</html>
